@@ -33,9 +33,9 @@ export default function index() {
   
     return (
         <div className="flex min-h-screen items-center justify-center">
-        <div className="relative h-[800px] w-[400px] overflow-hidden rounded-2xl">
-            <div className="h-[300px] w-full bg-[100%] bg-violet-500"></div>
-            <div className='h-[550px] w-full bg-[100%] bg-gray-700'></div>
+        <div className="relative h-[800px] w-[400px] overflow-hidden rounded-2xl bg-[url('/images/Onboard.png')]">
+            {/* <div className="h-[300px] w-full bg-[100%] bg-violet-500"></div>
+            <div className='h-[550px] w-full bg-[100%] bg-gray-700'></div> */}
             <div className="absolute bottom-0 flex h-4/5 w-full flex-col">
             <form className="space-y-4 px-5 py-5 text-center" onSubmit={form.handleSubmit}>
                 <div className="group relative">
