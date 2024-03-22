@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "incremental": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx"
+, "src/app/components/Nav.js", "src/components/Sidebar/SidebarLinkGroup.jsx", "src/components/Sidebar/index.jsx", "src/components/Header/DropdownUser.jsx", "src/components/Header/DropdownNotification.jsx", "src/components/Header/DropdownMessage.jsx", "src/components/Header/DarkModeSwitcher.jsx", "src/components/Sidebar/SidebarLinkGroup.js"  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
