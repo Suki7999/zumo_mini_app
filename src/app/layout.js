@@ -5,8 +5,8 @@ export default function RootLayout({ children}) {
   return (
      <html lang="en">
         <body>
-        <div className="m-1">
-          {children}
+          <div className="m-1">
+              {children}
           </div>
         </body>
       </html>
