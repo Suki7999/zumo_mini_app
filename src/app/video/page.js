@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from 'react'
 import Layout from '/src/components/Layouts'
 import { usePathname } from 'next/navigation';
-import { CldVideoPlayer } from 'next-cloudinary';
 import { axiosInstance } from '../axios/axiosInstance';
+import Image from 'next/image';
 
 export default function page() {
   const pathname  = usePathname();
@@ -18,10 +18,19 @@ export default function page() {
   }, [])
   return (
     <Layout layoutType="video">
-      {/* <p className='text-2xl text-white'>{pathname}</p> */}
+      <div className='bg-violet-500 flex items-center justify-items-start w-full h-[68px] rounded-b-md text-white my-4 cursor-pointer'>
+          <Image src={pathname.includes('video') ? `/images/logo/1.png` : ''} width={46} height={39} alt=''/>
+          <p className='text-[30px] ml-28 font-bold text-center'>100</p>
+      </div>
       {
         videos && videos.map((v, i) => (
-          <iframe key={i} className='rounded-t-lg h-[300px] w-full' src={`https://www.youtube.com/embed/${v.video_link}?controls=0`} allowfullscreen/>
+          <div className='bg-inherit px-2 static'>
+            <div className='bg-violet-500 rounded-lg w-[97px] h-[37.3px] absolute left-[72%] flex justify-between items-center p-2'>
+              <p className='text-white'>{v.loyalty_amount}</p>
+              <img className='w-[56px] h-[37.3px]' src="/images/logo/7.png" alt="money" />
+            </div>
+            <iframe key={i} className='rounded-t-lg h-[219px] w-full mt-[37.3px] static' src={`https://www.youtube.com/embed/${v.video_link}?controls=0`} allowFullScreen />
+          </div>
         ))
       }
     </Layout>
