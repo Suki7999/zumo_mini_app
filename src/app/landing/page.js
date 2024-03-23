@@ -50,7 +50,7 @@ return (
                     <Image src='/images/logo/1.png' style={{ height: '85px'}} width={123} height={130} alt='market'/>
                     <p className='text-center text-sm text-gray-100'>Видио</p>
                 </button>
-                <div className='box-border h-[130px] w-[112px] p-4 bg-violet-500 rounded-lg content-center mt-2'>
+                <div className='box-border h-[130px] w-[112px] p-4 bg-violet-500 rounded-lg content-center mt-2' onClick={() => router.push('/research')}>
                     <Image src='/images/logo/2.png'style={{ height: '85px'}} width={123} height={130} alt='market'/>
                     <p className='text-center text-sm text-gray-100'>Судалгаа</p>
                 </div>
