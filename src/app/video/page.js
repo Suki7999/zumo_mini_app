@@ -17,11 +17,11 @@ export default function page() {
     fetchVideos();
   }, [])
   return (
-    <Layout>
-      <p className='text-2xl text-white'>{pathname}</p>
+    <Layout layoutType="video">
+      {/* <p className='text-2xl text-white'>{pathname}</p> */}
       {
-        videos && videos.map((v) => (
-          <CldVideoPlayer width="400" height="260" src={`${v.link_to_connect}`}/>
+        videos && videos.map((v, i) => (
+          <iframe key={i} className='rounded-t-lg h-[300px] w-full' src={`https://www.youtube.com/embed/${v.video_link}?controls=0`} allowfullscreen/>
         ))
       }
     </Layout>

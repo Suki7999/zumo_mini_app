@@ -3,7 +3,7 @@ import SideBar from '/src/components/Sidebar';
 import Header from '/src/components/Header';
 import { useState } from 'react';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, layoutType}) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
     <div className="flex h-screen">
@@ -11,7 +11,9 @@ const Layout = ({ children }) => {
         <SideBar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen}/>
       </div>
       <div className="flex flex-col flex-1">
-        <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen}/>
+        {
+          layoutType === 'video' ? <p>Video top bar</p> : <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen}/>
+        }
         <main className="p-2">
           {children}
         </main>
