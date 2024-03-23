@@ -18,8 +18,8 @@ export default function page() {
     fetchVideos();
   }, [])
   return (
-    <Layout layoutType="video">
-      <div className='bg-violet-500 flex items-center justify-items-start w-full h-[68px] rounded-b-md text-white my-6 cursor-pointer'>
+    <Layout layoutType="Видио">
+      <div className='bg-violet-500 flex items-center justify-items-start w-full h-[68px] rounded-b-md text-white my-3 cursor-pointer'>
           <Image src={pathname.includes('video') ? `/images/logo/1.png` : ''} width={46} height={39} alt=''/>
           <p className='text-[30px] ml-28 font-bold text-center'>100</p>
       </div>
