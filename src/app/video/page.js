@@ -4,6 +4,7 @@ import Layout from '/src/components/Layouts'
 import { usePathname } from 'next/navigation';
 import { axiosInstance } from '../axios/axiosInstance';
 import Image from 'next/image';
+import Footer from '/src/components/Footer';
 
 export default function page() {
   const pathname  = usePathname();
@@ -33,6 +34,7 @@ export default function page() {
           </div>
         ))
       }
+      <Footer />
     </Layout>
   )
 }
