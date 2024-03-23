@@ -4,8 +4,10 @@ import { axiosInstance } from '../axios/axiosInstance'
 import Layout from '/src/components/Layouts'
 import ProgressSlider from '/src/app/components/Carousel';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 export default function page({...props}) {
+    const router = useRouter();
     const [banner, setBanner] = useState([]);
     useEffect(() => {
         const fetchBanner = async () => {
@@ -35,7 +37,7 @@ return (
                 Маркет
             </p>
             <button className='box-border h-[130px] w-[112px] p-4 bg-violet-500 rounded-lg content-center mt-2'>
-                <Image src='/images/logo/1.png' width={123} height={140} alt='market'/>
+                <Image src='/images/logo/1.png' style={{ height: '85px'}} width={123} height={130} alt='market'/>
                 <p className='text-center text-sm text-gray-100'>ТҮЦ</p>
             </button>
         </div>
@@ -44,17 +46,17 @@ return (
                 Цуглуулах
             </p>
             <div className='flex justify-items-start gap-2'>
+                <button className='box-border h-[130px] w-[112px] p-4 bg-violet-500 rounded-lg content-center mt-2' onClick={() => router.push('/video')}>
+                    <Image src='/images/logo/1.png' style={{ height: '85px'}} width={123} height={130} alt='market'/>
+                    <p className='text-center text-sm text-gray-100'>Видио</p>
+                </button>
                 <div className='box-border h-[130px] w-[112px] p-4 bg-violet-500 rounded-lg content-center mt-2'>
-                    <Image src='/images/logo/1.png' width={123} height={140} alt='market'/>
-                    <p className='text-center text-sm text-gray-100'>ТҮЦ</p>
+                    <Image src='/images/logo/2.png'style={{ height: '85px'}} width={123} height={130} alt='market'/>
+                    <p className='text-center text-sm text-gray-100'>Судалгаа</p>
                 </div>
                 <div className='box-border h-[130px] w-[112px] p-4 bg-violet-500 rounded-lg content-center mt-2'>
-                    <Image src='/images/logo/2.png' width={123} height={140} alt='market'/>
-                    <p className='text-center text-sm text-gray-100'>ТҮЦ</p>
-                </div>
-                <div className='box-border h-[130px] w-[112px] p-4 bg-violet-500 rounded-lg content-center mt-2'>
-                    <Image src='/images/logo/3.png' width={123} height={140} alt='market'/>
-                    <p className='text-center text-sm text-gray-100'>ТҮЦ</p>
+                    <Image src='/images/logo/3.png'style={{ height: '85px'}} width={123} height={130} alt='market'/>
+                    <p className='text-center text-sm text-gray-100'>Даалгавар</p>
                 </div>
             </div>
         </div>
@@ -64,16 +66,16 @@ return (
             </p>
             <div className='flex justify-items-start gap-2'>
                 <div className='box-border h-[130px] w-[112px] p-4 bg-violet-500 rounded-lg content-center mt-2'>
-                    <Image src='/images/logo/4.png' width={123} height={140} alt='market'/>
-                    <p className='text-center text-sm text-gray-100'>ТҮЦ</p>
+                    <Image src='/images/logo/4.png' style={{ height: '85px'}} width={123} height={130} alt='market'/>
+                    <p className='text-center text-sm text-gray-100'>Азын хүрд</p>
                 </div>
                 <div className='box-border h-[130px] w-[112px] p-4 bg-violet-500 rounded-lg content-center mt-2'>
-                    <Image src='/images/logo/5.png' width={123} height={140} alt='market'/>
-                    <p className='text-center text-sm text-gray-100'>ТҮЦ</p>
+                    <Image src='/images/logo/5.png' style={{ height: '85px'}} width={123} height={130} alt='market'/>
+                    <p className='text-center text-sm text-gray-100'>Эрдэнэс</p>
                 </div>
                 <div className='box-border h-[130px] w-[112px] p-4 bg-violet-500 rounded-lg content-center mt-2'>
-                    <Image src='/images/logo/6.png' width={123} height={140} alt='market'/>
-                    <p className='text-center text-sm text-gray-100'>ТҮЦ</p>
+                    <Image src='/images/logo/6.png' style={{ height: '85px'}} width={123} height={130} alt='market'/>
+                    <p className='text-center text-sm text-gray-100'>АХА</p>
                 </div>
             </div>
         </div>
