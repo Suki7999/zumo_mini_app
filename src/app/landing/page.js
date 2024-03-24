@@ -37,7 +37,7 @@ return (
                 Маркет
             </p>
             <button className='box-border h-[130px] w-[112px] p-4 bg-violet-500 rounded-lg content-center mt-2'>
-                <Image src='/images/logo/1.png' style={{ height: '85px'}} width={123} height={130} alt='market'/>
+                <Image src='/images/logo/ТҮЦ.png' style={{ height: '85px'}} width={123} height={130} alt='market'/>
                 <p className='text-center text-sm text-gray-100'>ТҮЦ</p>
             </button>
         </div>
