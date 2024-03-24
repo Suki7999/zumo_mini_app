@@ -3,8 +3,9 @@ import React, { useState } from 'react';
 import SideBar from '/src/components/Sidebar';
 import Header from '/src/components/Header';
 import BreadCrumbs from '/src/app/components/Breadcrumbs';
+import Loading from '/src/app/components/Loading';
 
-const Layout = ({ children, layoutType }) => {
+const Layout = ({ children, layoutType, loading }) => {
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
 
   const toggleSideBar = () => {
@@ -23,7 +24,7 @@ const Layout = ({ children, layoutType }) => {
         {layoutType ? <BreadCrumbs crumb={layoutType}/> : <Header toggleSideBar={toggleSideBar}/>}
 
         <main className="p-2">
-          {children}
+          {loading ? <Loading /> : children}
         </main>
       </div>
       

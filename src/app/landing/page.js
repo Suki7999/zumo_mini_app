@@ -9,15 +9,24 @@ import { useRouter } from 'next/navigation';
 export default function page({...props}) {
     const router = useRouter();
     const [banner, setBanner] = useState([]);
+    const [loading, setLoading] = useState(true);
+
     useEffect(() => {
         const fetchBanner = async () => {
-            const response = await axiosInstance.get('/api/sales/v1/rest/banner/');
-            setBanner(response.data.result);
+            try {
+                const response = await axiosInstance.get('/api/sales/v1/rest/banner/');
+                setBanner(response.data.result);
+                setLoading(false);
+            } catch (error) {
+                console.log(error);
+            } finally {
+                setLoading(false)
+            }
         }
         fetchBanner();
     }, [])
 return (
-    <Layout>
+    <Layout loading={!loading}>
         <section className='flex justify-between w-full'>
             <p className="text-[14px] text-white text-center p-1 uppercase bg-violet-500 rounded-md w-[110px] h-[100%] select-none whitespace-nowrap">lvl.1</p>
             <p className="text-[14px] text-white text-center p-1 uppercase bg-violet-500 rounded-md w-[110px] h-[100%] select-none whitespace-nowrap">30.000</p>
